@@ -1,0 +1,48 @@
+{
+  "name": "Member",
+  "plural": "members",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "hidden": [
+    "realm",
+    "username",
+    "password",
+    "verificationToken"
+  ],
+  "protected": [
+    "realm",
+    "username",
+    "password",
+    "verificationToken"
+  ],
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "saltedge": {
+      "type": "hasOne",
+      "model": "Website",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

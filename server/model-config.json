@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -31,5 +32,29 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Member": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Account": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Login": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Website": {
+    "dataSource": "db",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": false,
+          "prototype.__get__logins": true
+        }
+      }
+    }
   }
 }

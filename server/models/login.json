@@ -1,0 +1,27 @@
+{
+  "name": "Login",
+  "plural": "logins",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "provider_name": {
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "accounts": {
+      "type": "hasMany",
+      "model": "Account",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

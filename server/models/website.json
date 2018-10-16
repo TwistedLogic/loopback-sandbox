@@ -1,0 +1,42 @@
+{
+  "name": "Website",
+  "plural": "websites",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "url": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "public": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "logins": {
+      "type": "hasMany",
+      "model": "Login",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": false
+      }
+    },
+    "member": {
+      "type": "belongsTo",
+      "model": "Member",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [
+  ],
+  "methods": {}
+}
